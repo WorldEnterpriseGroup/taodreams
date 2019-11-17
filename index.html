@@ -189,16 +189,16 @@
 								data-endspeed="300"
 								>
 								<div class="sc_contact_form sc_contact_form_order aligncenter">
-									<form data-formtype="order" method="post" action="#">
+									<form data-formtype="order" method="post" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8">
 										<div class="sc_contact_form_in">
 											<h2 class="sc_contact_form_title">build a dream<br>with us</h2>
 											
 											<div>
 												<div class="form_date start">
-													<input placeholder="FIRST NAME" class="sc_contact_form" type="text" name="fname">
+													<input class="sc_contact_form" type="text" name="firstname" placeholder="FIRST NAME">
 												</div>
 												<div class="form_date end">
-													<input placeholder="LAST NAME" class="sc_contact_form" type="text" name="lname">
+													<input class="sc_contact_form" type="text" name="lastname" placeholder="LAST NAME">
 												</div>
 											</div>
 											<div>
@@ -206,21 +206,36 @@
 													<input id="sc_contact_form_email" type="text" name="email" placeholder="E-MAIL">
 												</div>
 												<div class="form_date end">
-													<input placeholder="PHONE NUMBER" class="sc_contact_form" type="text" name="tel">
+													<input  class="sc_contact_form" type="text" name="tel" placeholder="PHONE NUMBER">
 												</div>
 											</div>
-											<select id="destinations" class="destinations" name="criteria">
+											<select id="destinations" class="destinations" name="interest">
 												<option value="" disabled selected>CHOOSE A DREAM</option>
-												<option value="Build a Brand">BUILD A BRAND</option>
-												<option value="Career Development">BOOST YOUR CAREER</option>
-												<option value="Personal Growth">CHANGE YOUR LIFE</option>
+												<option value="Build a Brand">START A BUSINESS</option>
+												<option value="Grow Your Brand">GROW YOUR BRAND</option>
 												<option value="Financial Strategy">BUILD FINANCIAL WEALTH</option>
+												<option value="Career Development">BOOST YOUR CAREER</option>
+												<option value="Enlightenment">GAIN ENLIGHTENMENT</option>
+												<option value="Retreat">GO ON A RETREAT</option>
+												<option value="Learning Path">CHOOSE A LEARNING PATH</option>
+												<option value="Personal Growth">CREATE A BETTER LIFE</option>
 												<option value="Record a Song">RECORD A SONG</option>
 												<option value="Publish a Book">PUBLISH A BOOK</option>
 												<option value="Give to a Cause">GIVE TO A CAUSE</option>
 												<option value="Volunteer">VOLUNTEER FOR GOOD</option>
+												<option value="All">ALL OF THE ABOVE!</option>
 												<option value="Other">OTHER</option>
 											</select>
+											<div class="g-recaptcha"
+												data-sitekey="6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO"
+												data-callback="onSubmit"
+												data-size="invisible">
+											</div>
+											<input type="hidden" name="test" value="off">
+											<input type="hidden" name="owner" value="78e35265-4009-ea11-a811-000d3a5936c5">
+											<input type="hidden" name="website" value="Tao Dreams">
+											<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+											<input type="text" name="_gotcha" style="display:none" />
 											<div class="sc_contact_form"></div>
 											<div class="sc_contact_form"></div>
 											<div class="sc_contact_form_button">
@@ -445,7 +460,7 @@
 													</li>
 													<li class="last product">
 														<a href="#">
-															<img src="images/bigstock-gold-temple-japan-44883001-564x370.jpg" class="attachment-shop_catalog" alt="bigstock-gold-temple-japan-44883001" />
+															<img src="images/bigstock-gold-temple-japan-44883001-564x370.jpgf" class="attachment-shop_catalog" alt="bigstock-gold-temple-japan-44883001" />
 															<h3>Philanthropy</h3>
 														</a>
 														<div class="product_cats">
