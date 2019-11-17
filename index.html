@@ -39,6 +39,19 @@
 	<link rel='stylesheet' href='css/skin.css' type='text/css' media='all' />
 	<style id='themerex-custom-style-inline-css' type='text/css'></style>
 	<link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
+	
+	<script type='text/javascript' src="js/sweetalert2/dist/sweetalert2.all.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js?render=6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO'></script>
+	<script>
+			grecaptcha.ready(function() {
+			grecaptcha.execute('6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO', {action: 'Tao Dreams'})
+			.then(function(token) {
+			var recaptchaResponse = document.getElementById('recaptchaResponse');
+			recaptchaResponse.value = token;
+			// Verify the token on the server.
+			});
+			});
+		</script>
 
 </head>
 
@@ -189,16 +202,16 @@
 								data-endspeed="300"
 								>
 								<div class="sc_contact_form sc_contact_form_order aligncenter">
-									<form data-formtype="order" method="post" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8">
+									<form data-formtype="dreamer" enctype='application/json' id="register" method="post" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8">
 										<div class="sc_contact_form_in">
 											<h2 class="sc_contact_form_title">build a dream<br>with us</h2>
 											
 											<div>
 												<div class="form_date start">
-													<input class="sc_contact_form" type="text" name="firstname" placeholder="FIRST NAME">
+													<input class="sc_contact_form" type="text" name="firstname" id="firstname" placeholder="FIRST NAME">
 												</div>
 												<div class="form_date end">
-													<input class="sc_contact_form" type="text" name="lastname" placeholder="LAST NAME">
+													<input class="sc_contact_form" type="text" name="lastname" id="lastname" placeholder="LAST NAME">
 												</div>
 											</div>
 											<div>
@@ -206,7 +219,7 @@
 													<input id="sc_contact_form_email" type="text" name="email" placeholder="E-MAIL">
 												</div>
 												<div class="form_date end">
-													<input  class="sc_contact_form" type="text" name="tel" placeholder="PHONE NUMBER">
+													<input class="sc_contact_form" type="text" name="tel" id="tel" placeholder="TELEPHONE">
 												</div>
 											</div>
 											<select id="destinations" class="destinations" name="interest">
@@ -239,7 +252,7 @@
 											<div class="sc_contact_form"></div>
 											<div class="sc_contact_form"></div>
 											<div class="sc_contact_form_button">
-												<button>GET STARTED</button>
+												<button type="submit" value="Submit" id="submit">GET STARTED</button>
 											</div>
 											<div class="result sc_infobox"></div>
 										</div>
@@ -458,7 +471,7 @@
 													</li>
 													<li class="last product">
 														<a href="#">
-															<img src="images/bigstock-gold-temple-japan-44883001-564x370.jpgf" class="attachment-shop_catalog" alt="bigstock-gold-temple-japan-44883001" />
+															<img src="images/bigstock-gold-temple-japan-44883001-564x370.jpg" class="attachment-shop_catalog" alt="bigstock-gold-temple-japan-44883001" />
 															<h3>Philanthropy</h3>
 														</a>
 														<div class="product_cats">
@@ -846,14 +859,12 @@
 	<script type='text/javascript' src='js/vendor/picker/picker.start.js'></script>
 
 	<script type='text/javascript' src='js/custom/core.utils.min.js'></script>
-	<script type='text/javascript' src='js/custom/core.init.min.js'></script>
+	<script type='text/javascript' src='js/custom/core.init.js'></script>
 	<script type='text/javascript' src='js/custom/shortcodes.min.js'></script>
 
 	<script type='text/javascript' src='js/custom/main.js'></script>
 
 	<!--<script type='text/javascript' src='custom_tools/js/front.customizer.js'></script>-->
 	<!--<script type='text/javascript' src='custom_tools/js/skin.customizer.js'></script>-->
-
-
 </body>
 </html>

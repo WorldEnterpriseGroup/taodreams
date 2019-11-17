@@ -14,9 +14,12 @@ THEMEREX_GLOBALS["strings"] = {
 	error_global:		"Global error text",
 	name_empty:			"The name can\'t be empty",
 	name_long:			"Too long name",
-	email_empty:			"Too short (or empty) email address",
+	phone_empty:		"Too short (or empty) phone number",
+	phone_long:			"Too long phone address",
+	phone_not_valid:	"Phone Number not valid",
+	email_empty:		"Too short (or empty) email address",
 	email_long:			"Too long email address",
-	email_not_valid:		"Invalid email address",
+	email_not_valid:	"Invalid email address",
 	subject_empty:		"The subject can\'t be empty",
 	subject_long:		"Too long subject",
 	criteria_empty:		"The predefined destinations can\'t be empty",
@@ -120,6 +123,9 @@ THEMEREX_GLOBALS['popup_gallery']	= true;
 
 // E-mail mask
 THEMEREX_GLOBALS['email_mask']		= '^([a-zA-Z0-9_\-]+\.)*[a-zA-Z0-9_\-]+@[a-z0-9_\-]+(\.[a-z0-9_\-]+)*\.[a-z]{2,6}$';
+
+// Phone mask
+THEMEREX_GLOBALS['phone_mask']		= '/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im'
 
 // Messages max length
 THEMEREX_GLOBALS['contacts_maxlength']	= 1000;

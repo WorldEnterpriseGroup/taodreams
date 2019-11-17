@@ -1423,8 +1423,40 @@ function themerex_contact_form_validate(form){
                 }
             ]
         });
+	}
+	else if(form_type == 'dreamer'){
+        error = themerex_form_validate(form, {
+            error_message_show: true,
+            error_message_time: 4000,
+            error_message_class: "sc_infobox sc_infobox_style_error",
+            error_fields_class: "error_fields_class",
+            exit_after_first_error: false,
+            rules: [
+                {
+                    field: "firstname",
+                    min_length: { value: 2,	 message: THEMEREX_GLOBALS['strings']['name_empty'] },
+                    max_length: { value: 60, message: THEMEREX_GLOBALS['strings']['name_long'] }
+				},
+				{
+                    field: "lastname",
+                    min_length: { value: 2,	 message: THEMEREX_GLOBALS['strings']['name_empty'] },
+                    max_length: { value: 60, message: THEMEREX_GLOBALS['strings']['name_long'] }
+				},
+				{
+                    field: "tel",
+                    min_length: { value: 10,	 message: THEMEREX_GLOBALS['strings']['phone_empty'] },
+                    max_length: { value: 20, message: THEMEREX_GLOBALS['strings']['phone_long'] }
+                    // mask: { value: THEMEREX_GLOBALS['phone_mask'], message: THEMEREX_GLOBALS['strings']['phone_not_valid'] }
+                },
+				{
+					field: "email",
+					min_length: { value: 7,	 message: THEMEREX_GLOBALS['strings']['email_empty'] },
+					max_length: { value: 60, message: THEMEREX_GLOBALS['strings']['email_long'] },
+					mask: { value: THEMEREX_GLOBALS['email_mask'], message: THEMEREX_GLOBALS['strings']['email_not_valid'] }
+				}
+            ]
+        });
     }
-
 	else if (!form_custom) {
 		error = themerex_form_validate(form, {
 			error_message_show: true,
@@ -1460,44 +1492,46 @@ function themerex_contact_form_validate(form){
 		});
 	}
 	if (!error && url!='#') {
-		jQuery.post(url, {
-			action: "send_contact_form",
-			nonce: THEMEREX_GLOBALS['ajax_nonce'],
-			//type: form_custom ? 'custom' : 'contact',
-			type: form_type,
-			data: form.serialize()
-		}).done(function(response) {
-			"use strict";
-            console.log(response);
-			var rez = JSON.parse(response);
-			var result = form.find(".result").toggleClass("sc_infobox_style_error", false).toggleClass("sc_infobox_style_success", false);
-			if (rez.error === '') {
-				form.get(0).reset();
-                if(form_type=='order')
-				    result.addClass("sc_infobox_style_success").html(THEMEREX_GLOBALS['strings']['send_order_complete']);
-                else
-                    result.addClass("sc_infobox_style_success").html(THEMEREX_GLOBALS['strings']['send_complete']);
-			} else {
-				result.addClass("sc_infobox_style_error").html(THEMEREX_GLOBALS['strings']['send_error'] + ' ' + rez.error);
-			}
-			result.fadeIn().delay(3000).fadeOut();
-		});
+		event.preventDefault(); //prevent default action 
+		var post_url = form.data("action"); //get form action url
+		var request_method = form.data("method"); //get form GET/POST method
+		var content_type = form.data("enctype"); //get form GET/POST method
+		var form_data = form.serialize(); //Encode form elements for submission
+		
+		jQuery.ajax({
+				type: request_method,
+				url: post_url,
+				dataType: content_type,
+				data: form_data,
+				success: function (data) {
+					jQuery("#register")[0].reset();
+					jQuery("input:checkbox").attr('checked', false);
+					Swal({
+					title: '<strong>Submission Successful</strong>',
+					type: 'success',
+					html:
+						'Check your email to get started.<br>Our team will be in touch.',
+					showCloseButton: true,
+					focusConfirm: false,
+					confirmButtonText:
+						'<a style="color: white" href="start.html"><i class="fa fa-address-card"></i> OK</a>',
+					confirmButtonAriaLabel: 'OK',
+				});
+					console.log('Submission was successful.');
+					// console.log(data);					
+				},
+				error: function (data) {
+					console.log('An error occurred.');
+					console.log(data);
+				},
+			}).then(function(response){ //
+				jQuery("#server-results").html(response);
+		}); //form is validated do your work
+
+
 	}
 	return !error;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
