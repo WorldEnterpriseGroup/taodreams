@@ -3998,7 +3998,7 @@ footer.twitter_wrap .sc_section_overlay {
 /* Copyright area */
 .copyright_wrap {
 	font-size:12px;
-    line-height: 14px;
+	line-height: 14px;
 	padding: 1.5em 0;
 	background-color:#000000;
 	color: #ffffff;
@@ -4006,7 +4006,7 @@ footer.twitter_wrap .sc_section_overlay {
     text-transform: uppercase;
 }
 .copyright_wrap p {
-	margin:0;
+	margin:20px;
 }
 .copyright_wrap a:hover { color: #FFFFFF; }
 
@@ -4977,13 +4977,13 @@ table.picker__table tbody:last-child tr:last-child td {
 }
 
 .image_bg_1 {
-	background-image:url(../images/home_1.jpg);
+	background-image:url(../images/home_1b.jpg);
 }
 .image_bg_2 {
-	background-image:url(../images/home_2.jpg);
+	background-image:url(../images/home_2c.jpg);
 }
 .image_bg_3 {
-	background-image:url(../images/home_3.jpg);
+	background-image:url(../images/home_3a.jpg);
 }
 .image_bg_4 {
 	background-image: url(../images/bg_oblique_left_normal.png), url(../images/home_1.jpg);
