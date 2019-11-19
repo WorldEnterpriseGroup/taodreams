@@ -4980,6 +4980,7 @@ table.picker__table tbody:last-child tr:last-child td {
 	background-image:url(../images/home_1b.jpg);
 }
 .image_bg_2 {
+	background-position: right center;
 	background-image:url(../images/home_2c.jpg);
 }
 .image_bg_3 {
