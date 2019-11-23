@@ -685,8 +685,8 @@ button.sc_button_size_large,
 
 .sc_contact_form_order .sc_contact_form_title {
     color: #fff;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 26px; /* ORIGINALLY 36 PIXELS KRASHNIK */
+    line-height: 32px;
     margin: 0 0 25px 0;
     text-align: center;
 }
@@ -1215,7 +1215,7 @@ ul.sc_list_style_iconed {
 }
 
 .sc_list_item_style_1 {
-	color:#6666CC;
+	color:#ce2020;
 }
 
 .sc_list_item.sc_list_item_style_2,
@@ -1937,7 +1937,7 @@ ul.sc_list_style_iconed {
 
 
 .sc_skills_count.sc_skills_count_style_1 {background-color:#63cac5 !important; border-color:#63cac5 !important;}
-.sc_skills_count.sc_skills_count_style_2 {background-color:#6666CC !important; border-color:#6666CC !important;}
+.sc_skills_count.sc_skills_count_style_2 {background-color:#ce2020 !important; border-color:#ce2020 !important;}
 
 
 /* Slider
@@ -3121,7 +3121,7 @@ ul.sc_list_style_iconed {
 -------------------------------------------------------------- */
 .sc_tooltip_parent {
 	text-decoration: none;
-	border-bottom: 1px solid #6666CC;
+	border-bottom: 1px solid #ce2020;
 	position: relative;
 	display:inline-block;
 }
@@ -3160,7 +3160,7 @@ ul.sc_list_style_iconed {
 	bottom: -3px;
 	margin-left: -3px;
 	z-index: 1;
-	background-color:#6666CC;
+	background-color:#ce2020;
 	-webkit-transform: rotate(45deg);
 	   -moz-transform: rotate(45deg);
 	     -o-transform: rotate(45deg);

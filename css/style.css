@@ -1691,7 +1691,7 @@ header .cart > .cart_button:hover:after {
     color: #63cac5;
 }
 .user-popUp.account_wrap .user_info li.help a:before {
-    color: #6666CC;
+    color: #ce2020;
 }
 
 
@@ -4705,7 +4705,7 @@ table.picker__table tbody:last-child tr:last-child td {
     right: 2px;
     width: 0;
     height: 0;
-    border-top: 7px solid #6666CC;
+    border-top: 7px solid #ce2020;
     border-left: 7px solid transparent !important;
 }
 .picker__day--disabled:before {

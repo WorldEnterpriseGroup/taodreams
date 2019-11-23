@@ -25,7 +25,7 @@ custom_options  +=				'</div>';
 custom_options  +=				'<div class="co_section">';
 custom_options  +=					'<div class="co_label">Custom Color</div>';
 custom_options  +=					'<div class="co_colorpic_list">';
-custom_options  +=						'<div class="iColorPicker" data-options="main_color" data-value="#6666CC">';
+custom_options  +=						'<div class="iColorPicker" data-options="main_color" data-value="#ce2020">';
 custom_options  +=							'<span>Main color</span>';
 custom_options  +=						'</div>';
 custom_options  +=						'<div class="iColorPicker" data-options="accent_color" data-value="#63cac5">';

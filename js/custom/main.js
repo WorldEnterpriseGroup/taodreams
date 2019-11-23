@@ -52,7 +52,7 @@ THEMEREX_GLOBALS["strings"] = {
 
 // Theme base font
 if (THEMEREX_GLOBALS['theme_font']=='') THEMEREX_GLOBALS['theme_font'] = 'Cabin';
-THEMEREX_GLOBALS['main_color'] = '#6666CC';
+THEMEREX_GLOBALS['main_color'] = '#ce2020';
 THEMEREX_GLOBALS['accent_color'] = '#63cac5';
 THEMEREX_GLOBALS['vc_edit_mode']		= false;
 
