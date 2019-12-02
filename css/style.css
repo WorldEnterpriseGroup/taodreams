@@ -5057,3 +5057,8 @@ table.picker__table tbody:last-child tr:last-child td {
 	   -moz-border-radius: 15px;
 			border-radius: 15px;
 }
+
+object{
+	pointer-events: none;
+}
+#loadOverlay{display: none;}
