@@ -1305,7 +1305,7 @@ section.no_padding_lr > .container{
 	font-size: 30px;
 	margin-left:0;
     color: #fff;
-    vertical-align: bottom;
+    vertical-align: bottom !important;
     text-transform: uppercase;
 }
 .top_panel_fixed .menu_main_wrap .logo_main {
@@ -3793,7 +3793,7 @@ blockquote.sc_quote.style_2:before {
 	padding:10px 4px;
 }
 .widget_area .widget_calendar td {
-	font-size:0.875em
+	font-size:0.875em;
 	padding:0;
 }
 .widget_area .widget_calendar .month_cur {
@@ -4302,7 +4302,7 @@ body .mfp-wrap {
 .user-popUp ul.loginHeadTab:after{content: ''; height: 0; display: block;  clear: both;}
 .user-popUp ul.loginHeadTab li{ margin: 0; list-style: none; display: block; background-color: #fafafa; width: 50%; float: left; white-space: nowrap; }
 .user-popUp ul.loginHeadTab li a{ display: block; height: 85px; color: #bac0c3; font-size: 16px; text-align: center; line-height: 85px; text-transform: uppercase; font-weight: 600; overflow: hidden;}
-.user-popUp ul.loginHeadTab li a:before{ font-family: "fontello"; display: inline-block; padding: 0 10px 0 0; font-size: 18px; line-height: 18px; font-weight: : 100; }
+.user-popUp ul.loginHeadTab li a:before{ font-family: "fontello"; display: inline-block; padding: 0 10px 0 0; font-size: 18px; line-height: 18px; font-weight: 100; }
 .user-popUp ul.loginHeadTab li a.loginFormTab:before{ content: '\e82c';}
 .user-popUp ul.loginHeadTab li a.registerFormTab:before{ content: '\e8ad';}
 .user-popUp ul.loginHeadTab li.ui-tabs-active{ background-color: #fff; position: relative;}
